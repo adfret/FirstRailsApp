@@ -1,0 +1,9 @@
+<h1> Welcome </h1>
+
+<ol>
+<% @reviews.each do |review| %>
+<li><%= link_to "#{review.name}", review %></li>
+<% end %></ol>
+<br>
+
+<%= button_to "Create new", new_review_path, method: :get %>

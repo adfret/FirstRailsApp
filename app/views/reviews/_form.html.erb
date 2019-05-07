@@ -1,0 +1,13 @@
+
+<%= form_for @review do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<label>User</label>
+<%= f.collection_select :user_id, User.all, :id, :name %>
+<br>
+<label>Restaurant</label>
+<%= f.collection_select :restaurant_id, Restaurant.all, :id, :name %>
+<br>
+<%= f.submit %>
+<% end %>

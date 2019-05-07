@@ -1,0 +1,21 @@
+<h1>
+  <%= @review.name %>
+
+</h1>
+
+<p><%= @review.id %></p>
+
+<p><%= @review.updated_at %></p>
+
+<ol>
+
+  <li><%= link_to "#{@review.restaurant.name}", restaurant_path %></li>
+
+</ol>
+
+
+<%= link_to "Delete #{@review.name}", review_path, method: :delete %>
+
+<%= link_to "Edit #{@review.name}", edit_review_path %>
+
+<%= button_to "Go Back", reviews_path, method: :get %>

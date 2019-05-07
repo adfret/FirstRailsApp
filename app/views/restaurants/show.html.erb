@@ -1,0 +1,24 @@
+<h1>
+  <%= @restaurant.name %>
+
+</h1>
+
+<p><%= @restaurant.id %></p>
+
+<p><%= @restaurant.updated_at %></p>
+
+<h1> Rating </h1>
+<p> <%= @restaurant.reviews.rating %></p>
+
+<ol>
+
+  <li><%= link_to "#{@restaurant.reviews.name}", review_path %></li>
+
+</ol>
+
+
+<%= link_to "Delete #{@restaurant.name}", restaurant_path, method: :delete %>
+
+<%= link_to "Edit #{@restaurant.name}", edit_restaurant_path %>
+
+<%= button_to "Go Back", restaurants_path, method: :get %>

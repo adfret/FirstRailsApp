@@ -1,0 +1,9 @@
+<h1> Welcome </h1>
+
+<ol>
+<% @users.each do |user| %>
+<li><%= link_to "#{user.name}", user %></li>
+<% end %></ol>
+<br>
+<br>
+<%= button_to "Create new", new_user_path, method: :get %>

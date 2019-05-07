@@ -1,0 +1,12 @@
+<form accept-charset="UTF-8" action="/login" method="post">
+<input type="hidden" name="authenticity_token" id="authenticity_token" value="ANYTHING" />
+  <input name="utf8" type="hidden" value="&#x2713;" />
+  <label for="session_name">Name</label>
+  <input class="form-control" id="session_name"
+         name="session[name]" type="text" />
+  <label for="session_password">Password</label>
+  <input id="session_password" name="session[password]"
+         type="password" />
+  <input class="btn btn-primary" name="commit" type="submit"
+       value="Log in" />
+</form>

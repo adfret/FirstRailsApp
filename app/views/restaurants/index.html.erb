@@ -1,0 +1,10 @@
+<h1> Welcome </h1>
+
+
+<ol>
+<% @restaurants.each do |restaurant| %>
+<li><%= link_to "#{restaurant.name}", restaurant %></li>
+<% end %></ol>
+<br>
+
+<%= button_to "Create new", new_restaurant_path, method: :get %>
