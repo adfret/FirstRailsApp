@@ -2,9 +2,15 @@
 <html>
 <head>
     <center>
+        <h1><b>Foodster</b></h1>
+        <h3> Here to satisfy your hunger needs. </h3>
+        <br>
 <h2><b>Edit <%="#{@restaurant.name}"%></b></h2>
 <%= render "form" %>
-</center>
-</head>
-</html>
 
+</head>
+
+<br>
+<%= button_to "Go Back", restaurants_path, method: :get %>
+</center>
+</html>

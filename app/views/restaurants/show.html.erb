@@ -12,6 +12,7 @@
 <h3>Food Type: <%= "#{@restaurant.food_type}"%></h3>
 
 <h2><b><%="#{@restaurant.name}"%>'s Reviews/Ratings</b></h2>
+
 <h3><li><%= link_to "#{@restaurant.reviews.name}", review_path %></li></h3>
 <br>
 <h3><%= link_to "Want to Delete #{@restaurant.name}?", restaurant_path, method: :delete %></h3>
