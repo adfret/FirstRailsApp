@@ -13,7 +13,11 @@
 
 <h2><b><%="#{@restaurant.name}"%>'s Reviews/Ratings</b></h2>
 
-<h3><li><%= link_to "#{@restaurant.reviews.name}", review_path %></li></h3>
+<h3>
+  <% @restaurant.reviews.each do |review| %>
+  <li><%= link_to "#{review.name}", review %></li>
+  <% end %>
+  
 <br>
 <h3><%= link_to "Want to Delete #{@restaurant.name}?", restaurant_path, method: :delete %></h3>
 
