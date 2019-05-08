@@ -13,7 +13,9 @@
 
   <h2><b><%="#{@user.name}"%>'s Reviews/Ratings</b></h2>
   <h3>
-    <li><%= link_to "#{@user.reviews.name}", review_path %></li>
+    <% @user.reviews.each do |review| %>
+    <li><%= link_to "#{review.name}", review %></li>
+    <% end %>
   </h3>
   <br>
   <h3><%= link_to "Want to Delete #{@user.name}'s Profile? ", user_path, method: :delete %></h3>
