@@ -1,24 +1,43 @@
-<h1>
-  <%= @restaurant.name %>
+<!DOCTYPE html>
+<html>
 
-</h1>
+<head>
+  <center>
+    <h1>Foodster</h1>
+    <h3> Here to satisfy your hunger needs. </h3>
+</head>
+<body>
+<h1><b><%= "#{@restaurant.name}"%></b></h1>
+<h3>Location: <%= "#{@restaurant.location}"%></h3>
+<h3>Food Type: <%= "#{@restaurant.food_type}"%></h3>
 
-<p><%= @restaurant.id %></p>
+<h2><b><%="#{@restaurant.name}"%>'s Reviews/Ratings</b></h2>
+<h3><li><%= link_to "#{@restaurant.reviews.name}", review_path %></li></h3>
+<br>
+<h3><%= link_to "Want to Delete #{@restaurant.name}?", restaurant_path, method: :delete %></h3>
 
-<p><%= @restaurant.updated_at %></p>
-
-<h1> Rating </h1>
-<p> <%= @restaurant.reviews.rating %></p>
-
-<ol>
-
-  <li><%= link_to "#{@restaurant.reviews.name}", review_path %></li>
-
-</ol>
-
-
-<%= link_to "Delete #{@restaurant.name}", restaurant_path, method: :delete %>
-
-<%= link_to "Edit #{@restaurant.name}", edit_restaurant_path %>
-
+<h3><%= link_to "Want to Edit #{@restaurant.name}?", edit_restaurant_path %></h3>
+</body>
+<br>
 <%= button_to "Go Back", restaurants_path, method: :get %>
+
+
+</center>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
