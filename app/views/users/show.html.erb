@@ -1,20 +1,29 @@
-<h1>
-  <%= @user.name %>
+<!DOCTYPE html>
+<html>
 
-</h1>
+<head>
+  <center>
+    <h1>Foodster</h1>
+    <h3> Here to satisfy your hunger needs. </h3>
+</head>
 
-<p><%= @user.id %></p>
+<body>
+  <h1><b><%= "#{@user.name}"%></b></h1>
+  <h3>Location: <%= "#{@user.location}"%></h3>
 
-<p><%= @user.updated_at %></p>
+  <h2><b><%="#{@user.name}"%>'s Reviews/Ratings</b></h2>
+  <h3>
+    <li><%= link_to "#{@user.reviews.name}", review_path %></li>
+  </h3>
+  <br>
+  <h3><%= link_to "Want to Delete #{@user.name}'s Profile? ", user_path, method: :delete %></h3>
 
-<ol>
-  <li><%= link_to "#{@user.restaurants.name}", restaurant_path %></li>
-
-</ol>
-
-
-<%= link_to "Delete #{@user.name}", user_path, method: :delete %>
-
-<%= link_to "Edit #{@user.name}", edit_user_path %>
-
+  <h3><%= link_to "Want to Edit #{@user.name}'s Profile?", edit_user_path %></h3>
+</body>
+<br>
 <%= button_to "Go Back", users_path, method: :get %>
+
+
+</center>
+
+</html>
