@@ -1,21 +1,32 @@
-<h1>
-  <%= @review.name %>
+<!DOCTYPE html>
+<html>
 
-</h1>
+<head>
+  <center>
+    <h1>Foodster</h1>
+    <h3> Here to satisfy your hunger needs. </h3>
+</head>
 
-<p><%= @review.id %></p>
+<body>
+  
+  <h1><b>Restaurant: <%="#{@review.restaurant.name}"%></b></h1>
+  <h3>Location: <%="#{@review.restaurant.location}"%></h3>
+  <h3>Food Type: <%="#{@review.restaurant.food_type}"%></h3>
+  <br>
+  <h2><b>Review/Rating</b></h2>
+  <h3>Review: <%="#{@review.name}"%></h3>
+  <h3>User: <%="#{@review.user.name}"%></h3>
+  <h3>Rating: <%="#{@review.rating}"%></h3>
 
-<p><%= @review.updated_at %></p>
+  <br>
+  <h3><%= link_to "Want to Delete #{@review.name} Review?", review_path, method: :delete %></h3>
 
-<ol>
-
-  <li><%= link_to "#{@review.restaurant.name}", restaurant_path %></li>
-
-</ol>
-
-
-<%= link_to "Delete #{@review.name}", review_path, method: :delete %>
-
-<%= link_to "Edit #{@review.name}", edit_review_path %>
-
+  <h3><%= link_to "Want to Edit #{@review.name} Review?", edit_review_path %></h3>
+</body>
+<br>
 <%= button_to "Go Back", reviews_path, method: :get %>
+
+
+</center>
+
+</html>

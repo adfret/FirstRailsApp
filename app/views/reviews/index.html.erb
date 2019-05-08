@@ -12,7 +12,8 @@
 <body>
     <% @reviews.each do |review| %>
     <h3>
-        <li><%= link_to "#{review.name}",review %></li>
+        <li><%= link_to "#{review.name}",review %>
+        by <%="#{review.user.name}"%></li>
     </h3>
     <% end %>
     <br>
