@@ -11,7 +11,7 @@
 <h3>Location: <%= "#{@restaurant.location}"%></h3>
 <h3>Food Type: <%= "#{@restaurant.food_type}"%></h3>
 
-<h2><b><%="#{@restaurant.name}"%>'s Reviews/Ratings</b></h2>
+<h2><b><%="#{@restaurant.name}"%>'s Reviews & Ratings</b></h2>
 
 <h3>
   <% @restaurant.reviews.each do |review| %>
@@ -19,9 +19,9 @@
   <% end %>
   
 <br>
-<h3><%= link_to "Want to Delete #{@restaurant.name}?", restaurant_path, method: :delete %></h3>
+<h3><%= link_to "Delete #{@restaurant.name}?", restaurant_path, method: :delete %></h3>
 
-<h3><%= link_to "Want to Edit #{@restaurant.name}?", edit_restaurant_path %></h3>
+<h3><%= link_to "Edit #{@restaurant.name}?", edit_restaurant_path %></h3>
 </body>
 <br>
 <%= button_to "Go Back", restaurants_path, method: :get %>

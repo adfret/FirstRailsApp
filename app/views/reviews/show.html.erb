@@ -13,15 +13,15 @@
   <h3>Location: <%="#{@review.restaurant.location}"%></h3>
   <h3>Food Type: <%="#{@review.restaurant.food_type}"%></h3>
   <br>
-  <h2><b>Review/Rating</b></h2>
+  <h2><b>Reviews & Ratings</b></h2>
   <h3>Review: <%="#{@review.name}"%></h3>
   <h3>User: <%="#{@review.user.name}"%></h3>
   <h3>Rating: <%="#{@review.rating}"%></h3>
 
   <br>
-  <h3><%= link_to "Want to Delete #{@review.name} Review?", review_path, method: :delete %></h3>
+  <h3><%= link_to "Delete #{@review.name} Review?", review_path, method: :delete %></h3>
 
-  <h3><%= link_to "Want to Edit #{@review.name} Review?", edit_review_path %></h3>
+  <h3><%= link_to "Edit #{@review.name} Review?", edit_review_path %></h3>
 </body>
 <br>
 <%= button_to "Go Back", reviews_path, method: :get %>
