@@ -1,9 +1,10 @@
-<h1> Welcome </h1>
+<h1> Welcome Foodster </h1>
+<h3> The App for all your hunger needs. </h3>
 
-<ol>
-<% @reviews.each do |review| %>
+<ul>
+<h2>Featured Reviews:<% @reviews.each do |review| %></h2>
 <li><%= link_to "#{review.name}", review %></li>
-<% end %></ol>
+<% end %></ul>
 <br>
 
-<%= button_to "Create new", new_review_path, method: :get %>
+<%= button_to "Create a Review", new_review_path, method: :get %>
