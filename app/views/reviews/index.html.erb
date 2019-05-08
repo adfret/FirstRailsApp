@@ -1,10 +1,26 @@
-<h1> Welcome Foodster </h1>
-<h3> The App for all your hunger needs. </h3>
+<!DOCTYPE html>
+<html>
 
-<ul>
-<h2>Featured Reviews:<% @reviews.each do |review| %></h2>
-<li><%= link_to "#{review.name}", review %></li>
-<% end %></ul>
-<br>
+<head>
+    <center>
+        <h1><b>Foodster</b></h1>
+        <h3> Here to satisfy your hunger needs. </h3>
+        <br>
+        <h2><em>Featured Reviews</em></h2>
+</head>
 
-<%= button_to "Create a Review", new_review_path, method: :get %>
+<body>
+    <% @reviews.each do |review| %>
+    <h3>
+        <li><%= link_to "#{review.name}",review %></li>
+    </h3>
+    <% end %>
+    <br>
+</body>
+
+
+<%= button_to "Add a New Review", new_review_path, method: :get %>
+</center>
+
+
+</html>
