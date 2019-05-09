@@ -14,7 +14,6 @@ class ReviewsController < ApplicationController
           @review = Review.new()
         end
 
-
         def create
           @review = Review.create(review_params)
             if @review.valid?
@@ -23,7 +22,6 @@ class ReviewsController < ApplicationController
               render "new"
             end
         end
-
 
         def edit
           @review = Review.find(params[:id])
@@ -36,20 +34,15 @@ class ReviewsController < ApplicationController
           redirect_to @review
         end
 
-
         def destroy
           @review = Review.find(params[:id])
           @review.destroy
           redirect_to reviews_path
         end
 
-
         private
 
         def review_params
           params.require(:review).permit(:name, :user_id, :restaurant_id, :rating)
         end
-
-
-
 end
