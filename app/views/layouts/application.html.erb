@@ -4,12 +4,25 @@
     <title>Foodster</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <center>
+        <img src="https://cdn.shopify.com/s/files/1/0003/1398/3023/files/THE_REAL_LOGO_280x@2x.png?v=1530516046"
+          alt="headline" width="260px" height="263">
+    </center>
+    <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   
   </head>
 
   <body>
     <%= yield %>
+
+  <center>
+    <style>
+      body {
+        background-image: 
+        url("http://2.bp.blogspot.com/-78Rt4MUJlN0/U0t28A43RqI/AAAAAAAAB4U/EADg8NgMEFU/s1600/paper_texture_mybovs_10_1.jpg");
+      }
+    </style>
+  </center>
   </body>
 </html>
